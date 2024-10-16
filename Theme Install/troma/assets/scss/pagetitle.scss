@@ -1,0 +1,113 @@
+// Page Title
+//--------------------------------------------------
+#pagetitle {
+  padding: 190px 0 182px;
+  background-color: $primary_color;
+  background-image: url(../images/bg-page-title.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+  @media #{$max-lg} {
+    background-attachment: inherit;
+  }
+  @media #{$max-md} {
+    padding: 60px 0;
+  }
+  &:before {
+    @include background-horizontal($primary_color, $secondary_color);
+    opacity: 0.9;
+  }
+  .container {
+    position: relative;
+    z-index: 99;
+  }
+  h1.page-title {
+  	font-size: 70px;
+    line-height: 1.142;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+    @media #{$max-sm} {
+      font-size: 36px;
+    }
+    @media #{$max-xs} {
+      font-size: 24px;
+    }
+  }
+  .page-subtitle {
+    margin-top: 21px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+    font-family: inherit;
+    a {
+      color: inherit;
+    }
+  }
+  .ct-breadcrumb {
+    margin: 0 0 23px;
+    list-style: none;
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #fff;
+      display: inline-block;
+      margin-right: 11px;
+      @media #{$max-sm} {
+        font-size: 16px;
+      }
+      &:before {
+        content: "|";
+        margin-right: 13px;
+      }
+      a {
+        color: #fff;
+      }
+      &:first-child:before {
+        display: none;
+      }
+    }
+  }
+  .author-image {
+    margin-bottom: 12px;
+    img {
+      max-width: 100px;
+      @include border-radius(100px);
+    }
+  }
+  .author-name {
+    margin-bottom: 18px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+      color: #fff;
+    }
+  }
+}
+.single {
+  #pagetitle {
+    h1.page-title {
+      font-size: 48px;
+      @media #{$max-sm} {
+        font-size: 36px;
+      }
+      @media #{$max-xs} {
+        font-size: 24px;
+      }
+    }
+    .ct-breadcrumb {
+      li {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
